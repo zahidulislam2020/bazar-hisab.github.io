@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Mina:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: hsla(197, 100%, 63%, 1);
+
+  background: linear-gradient(
+    90deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    90deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    90deg,
+    hsla(197, 100%, 63%, 1) 0%,
+    hsla(294, 100%, 55%, 1) 100%
+  );
+
+  filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#40C9FF", endColorstr="#E81CFF", GradientType=1 );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  width: 550px;
+  background: white;
+  height: 100vh;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.315);
+  border-left: 2px solid rgba(0, 0, 0, 0.315);
+}
+h1, .day-night-time {
+  text-align: center;
+  color: crimson;
+  font-family: "Mina", sans-serif;
+  text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.315);
+}
+.input-field {
+  width: 80%;
+  margin: 0 auto;
+  border: 1px solid orangered;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 10px 3px;
+}
+.input-rack {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.warning-rack {
+  margin-top: -10px;
+  width: 87.5%;
+}
+
+.warning-rack > span {
+  font-size: 10px;
+  color: red;
+  margin-right: 30px;
+}
+
+.warning-rack > span:nth-child(1) {
+  margin-left: 10px;
+  animation: invalidInput 800ms infinite;
+  visibility: hidden;
+}
+
+@keyframes invalidInput {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.warning-rack > span:nth-child(2) {
+  margin-left: 2px;
+  animation: invalidInput 800ms infinite;
+  visibility: hidden;
+}
+
+@keyframes invalidInput {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.warning-rack > span:nth-child(3) {
+  margin-left: 5px;
+  margin-right: 0;
+  animation: invalidInput 800ms infinite;
+  visibility: hidden;
+}
+
+@keyframes invalidInput {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+input {
+  width: 100px;
+  height: 25px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+input[placeholder="product"] {
+  text-align: left;
+  padding: 0 3px;
+}
+
+.warning {
+  border: 2px solid red;
+  animation: warning 0.2s 5;
+}
+
+@keyframes warning {
+  100% {
+    transform: scale(0.95);
+  }
+}
+
+input:hover {
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.315);
+  transition: 0.5s;
+}
+button {
+  width: 50px;
+  height: 52px;
+  background: teal;
+  border-radius: 2px;
+  font-size: 11px;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+button > i {
+  color:aliceblue
+}
+
+button:hover {
+  background: silver;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.315);
+}
+
+button:hover i {
+  color: teal;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.container .content {
+  width: 80%;
+  height: 57%;
+  margin: 0 auto 10px;
+  border: 1px solid red;
+  border-radius: 5px;
+  overflow: hidden;
+  padding: 5px 5px 35px;
+}
+
+.scroll {
+  overflow-y: auto;
+  height: 100%;
+}
+
+.item-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  border-radius: 5px;
+  background-color: orangered;
+  color: rgb(255, 255, 255);
+  margin: auto;
+  margin-bottom: 10px;
+  transition: opacity 0.3s;
+}
+
+.trans {
+  opacity: 1;
+  margin-bottom: 1px;
+}
+.item-container > span {
+  padding: 3px 0;
+  font-size: 13px;
+  width: 65px;
+  text-align: center;
+  border-right: 1px solid;
+  flex-grow: 1;
+}
+
+.item-container > span:nth-child(1) {
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 25px;
+}
+
+.item-container > span:nth-child(2) {
+  width: 120px;
+  flex-grow: 2;
+}
+
+.item-container > span:nth-child(3) {
+  flex-grow: 1;
+  flex-shrink: 1;
+  width: 50px;
+}
+
+.item-container > span:nth-child(6) {
+  border-right: none;
+  width: 70px;
+}
+
+.calculate {
+  width: 400px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#pid {
+  width: 180px;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  background: teal;
+  text-align: center;
+  line-height: 52px;
+  color: aliceblue;
+}
+
+.message {
+  width: 400px;
+  margin: 5px auto;
+  font-size: 14px;
+  text-align: center;
+  color: red;
+  animation: blinking 800ms infinite;
+  visibility: hidden;
+}
+
+@keyframes blinking {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*///////////////////////////////////////////////////*/
