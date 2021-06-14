@@ -6,6 +6,9 @@ var price = document.getElementById("price");
 var display = document.getElementById("pid");
 var day_night_time = document.querySelector(".day-night-time");
 
+// focus on load
+product.focus()
+
 // getting input values including total price of each item
 
 inputBtn.addEventListener("click", clickHandler);
@@ -54,6 +57,7 @@ function clickHandler(e) {
         addingItemToList(array);
         // grand total
         grandTotal(array);
+        product.focus()
       }
     }
   }
@@ -297,6 +301,11 @@ function presentingTime() {
 }
 
 presentingTime();
+
+let stopId = setInterval(timer, 1000);
+function timer() {
+  presentingTime();
+}
 
 // converting English digit to Bangla
 
