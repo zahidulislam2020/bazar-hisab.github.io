@@ -254,7 +254,7 @@ function presentingTime() {
     day_night = 'সকাল'
   }else if(hr > 11 && hr < 15) {
     day_night = 'দুপুর'
-  }else if(hr > 15 && hr < 18) {
+  }else if(hr >= 15 && hr < 18) {
     day_night = 'বিকাল'
   }else if(hr > 17 && hr < 19) {
     day_night = 'সন্ধ্যা'
